@@ -1,0 +1,86 @@
+# ============================
+# WordPress project .gitignore
+# ============================
+
+# --- OS/Editor junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+Icon\r
+
+.idea/
+.vscode/
+*.code-workspace
+*.sublime-*
+.history/
+
+# --- Package managers / build outputs ---
+node_modules/
+.pnpm-store/
+.yarn/
+.yarnrc.yml
+.npmrc
+dist/
+build/
+.cache/
+.tmp/
+
+# Composer (keep lock if you actually use Composer; otherwise ignore vendor)
+vendor/
+
+# --- Logs & dumps ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.sql
+*.sql.gz
+*.sqlite
+*.sqlite3
+dump.rdb
+
+# --- Env / secrets ---
+.env
+.osp
+.env.*
+!.env.example
+wp-config.php
+
+# --- Archives / exports ---
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# --- WordPress mutable content ---
+# Keep your custom themes/plugins in git; ignore runtime/generated stuff
+wp-content/uploads/
+!wp-content/uploads/.gitkeep
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups*/
+wp-content/ai1wm-backups/
+wp-content/w3tc-cache/
+wp-content/wc-logs/
+wp-content/wflogs/
+wp-content/languages/
+
+# Common cache/object-cache drop-ins (optional to ignore)
+wp-content/advanced-cache.php
+wp-content/object-cache.php
+
+# --- PHPUnit / coverage ---
+.phpunit.result.cache
+coverage/
+
+# --- OSPanel/OpenServer (local) ---
+# (No standard files in project root, but ignore stray temp files just in case)
+~$*
+*.tmp
+*.bak
+*.orig
+
+
